@@ -17,3 +17,9 @@ compile_commands.json
 
 # Local VS Code configuration
 .vscode/
+
+# DataGrip / JetBrains settings
+.idea/
+
+# Local secrets
+.env

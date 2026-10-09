@@ -1,0 +1,11 @@
+CREATE DATABASE DormCast
+
+USE DormCast;
+
+IF OBJECT_ID('Readings', 'U')IS NULL
+CREATE TABLE Readings (
+    Id INT IDENTITY (1,1) PRIMARY KEY,
+    Temperature FLOAT NOT NULL,
+    Humidity FLOAT NOT NULL,
+    RecordedAt DATETIME2 NOT NULL DEFAULT  SYSDATETIME()
+);
