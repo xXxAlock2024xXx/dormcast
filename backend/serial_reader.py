@@ -1,6 +1,8 @@
 import json
 import serial
+import requests
 
+API_URL = "http://127.0.0.1:8000/readings"
 SERIAL_PORT = "/dev/cu.usbserial-120"
 BAUD_RATE = 9600
 
@@ -26,6 +28,7 @@ def main():
                 humidity = reading["humidity_percent"]
 
                 print(f"Temperature: {temperature:.1f} °C | Humidity: {humidity:.1f} %")
+                requests.post(API_URL, json={"temperature": temperature, "humidity": humidity}, timeout=5)
 
             except (json.JSONDecodeError, KeyError, TypeError, ValueError):
                 if line.startswith("{"):
