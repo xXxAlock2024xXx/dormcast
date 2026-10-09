@@ -1,0 +1,11 @@
+# PlatformIO build artifacts
+.pio/
+
+# Generated files
+compile_commands.json
+
+# macOS
+.DS_Store
+
+# Local VS Code configuration
+.vscode/
