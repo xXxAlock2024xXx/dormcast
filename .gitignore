@@ -1,5 +1,13 @@
+
 # PlatformIO build artifacts
 .pio/
+
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
 
 # Generated files
 compile_commands.json
